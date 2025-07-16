@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie</title>
+    <link rel="stylesheet" href="{% static 'admin/css/base.css' %}">
+    <style>
+        body { text-align: center; padding: 50px; }
+        .form { display: inline-block; text-align: left; }
+    </style>
+</head>
+<body>
+    <h2>Zaloguj się</h2>
+    <form method="post" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="default">Zaloguj</button>
+    </form>
+</body>
+</html>

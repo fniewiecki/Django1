@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona główna</title>
+    <link rel="stylesheet" href="{% static 'admin/css/base.css' %}">
+    <style>
+        body {
+            padding: 40px;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #0c4b33;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Witaj {{ request.user.username }}!</h1>
+    <a class="button" href="{% url 'ocen' %}">Przejdź do oceniania EKG</a>
+    <a class="button" href="/admin/">Przejdź do panelu admina</a>
+</body>
+</html>

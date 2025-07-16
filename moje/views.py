@@ -5,8 +5,13 @@ from django.conf import settings
 from django.shortcuts import render, redirect
 from .forms import OcenaEKGForm
 from .models import ocenaEKG
+from django.contrib.auth.decorators import login_required
 
+@login_required
+def home(request):
+    return render(request, 'home.html')
 
+@login_required
 def ocen_zdjecie(request):
     folder = os.path.join(settings.MEDIA_ROOT, 'ekg')
     lista_plikow = os.listdir(folder)
