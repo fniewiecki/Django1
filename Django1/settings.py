@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1%(__m1)ohq2n35c8h+*8#j7=f77nbf3^3*_&rbbh%+s_$r%bq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['tesAIapp.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
